@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(95, 239, 191);
+    }
+    #date{
+        margin-right: 20px;
+        padding: 15px 85px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+    }
+    #btn{
+        padding: 15px 20px;
+        background-color: rgb(66, 178, 222);
+        color: #fff;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #para{
+        color: rgb(228, 243, 242);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        font-size: 17px;
+    }
+</style>
+<body>
+    
+    <div class="container">
+        <div id="box">
+            <input type="date" name="" id="date">
+            <button id="btn" onclick="myCalc()">Calculate</button>
+        </div>
+        <div >
+            <p id="para"></p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+       function myCalc() {
+        let box = document.getElementById("para");
+        let myInput = document.getElementById("date");
+       let myDate = new Date(myInput.value);
+       let dateGet = myDate.getDate();
+       let monthGet = myDate.getMonth()+1;
+       let yearGet = myDate.getFullYear();
+       let nowDate = new Date();
+       let dateGet2 = nowDate.getDate();
+       let monthGet2 = nowDate.getMonth()+1;
+       let yearGet2 = nowDate.getFullYear();
+       let d,m,y;
+       y = yearGet2-yearGet;
+       if(monthGet2>=monthGet){
+        m = monthGet2-monthGet;
+       }else{
+        y--;
+        m = 12+monthGet2-monthGet;
+       }
+       if(dateGet2>=dateGet){
+        d = dateGet2-dateGet;
+       }else{
+        m--;
+        d = getDayInMonth(yearGet,monthGet)+dateGet2-dateGet;
+       }
+       if(m<0){
+        m = 11;
+        y--;
+       }
+      box.innerHTML = `You are ${y} Years, ${m} Months and ${d} Days Old`;
+       }
+       
+       function getDayInMonth(y,m){
+        return new Date(y,m,0).getMonth();
+       }
+
+
+
+
+
+
+
+
+
+
+        // let d = new Date();
+        // // let h = d.getDate();
+        // let arr = ["Jan","Feb","Mar","Apr","May","June","Jul","Aug","Sep","Oct","Nov","Dec"];
+        // let arr2 = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"];
+        // let m = arr2[d.getMonth()];
+        // console.log(m);
+        // // let s = d.getFullYear();  
+        // // let prom = +prompt("Enter a Date"); 
+        // let ds = new Date();
+        // let sd = ds.setDate(prom);
+        // // let tot = d-sd;
+        // // console.log(Math.round(tot/(1000*60*60*24*365.25)));
+   
+        // // console.log(d)
+        
+    </script>
+</body>
+</html>

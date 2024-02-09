@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        // "use strict"
+        //Hoisting
+        console.log(a);
+        var a = 34;
+        console.log(a);
+        function add(a, b) {
+            console.log(sum);
+            var sum = a + b;
+        };
+        add(3, 4);
+
+        var res = sun(6)(4);
+        //  var res2 = res(4);
+        console.log(res);
+        function sun(val) {
+            return function (er) {
+                return val + er;
+            };
+        };
+
+        //strict mode
+        // function abc(val =15){
+        //     "use strict"
+        //     console.log(val);
+        // };
+        // abc(50);
+
+        //this keyword
+        let v = this;
+        console.log(v);
+        let func = () => {
+            console.log(this);
+        }
+        func();
+        let obj = {
+            name: "Moiz",
+            course: "Front End Developer and Artificial Intelligence",
+            cal: function () {
+                console.log(this);
+            }
+        }
+        obj.cal();
+        function func2() {
+
+            console.log(this);
+        };
+        func2();
+
+        let obj2 = {
+            name: "Mercedez",
+            sum: function () {
+                console.log(this);
+                function num() {
+                    console.log(this);
+                }
+                num();
+            }
+        };
+        obj2.sum();
+
+        let ab = 100;
+        let obj3 = {
+            name: "edce",
+            id: 345
+        };
+        let func3 = (a, b) => {
+            a = 200;
+            obj3.name = "Abdul Moiz";
+            return b, a;
+
+        }
+        let res3 = func3(ab, obj3);
+        console.log(res3);
+        // console.log(obj3);
+        // console.log(ab);
+
+        //Closures
+        let aq = 45;
+        function func4() {
+            // console.log(aq);
+            let ab = 34;
+            return function () {
+                console.log(aq + ab);
+            }
+            // aq = 6;
+            // ab = 5;
+        }
+        let f1 = func4();
+        f1();
+        aq = 6;
+
+        let w = 40;
+        const func5 = () => {
+            return function (x) {
+                return w + x;
+            }
+        }
+        let resl = func5();
+        console.log(resl(60));
+    //    let resl1 =  resl(60);
+    //    console.log(resl1);
+    let func6 = (e) => {
+        return function(r){
+            console.log(r+e);
+        }
+    }
+    let fun = func6(5)(5);
+    // fun(5);
+
+    const func7 = (a) => {
+        return (b) => (c) => (d) => a+b+c+d;
+    }
+    let resl2 = func7(5)(5)(5)(5);
+    // let resl2 = func7(5);
+    // let resl3 = resl2(5);
+    // let resl4 = resl3(5);
+    // let resl5 = resl4(5);
+    // console.log(resl5);
+    console.log(resl2);
+
+    let func8 = (e) => {
+        return function(f){
+            return function(g){
+                return function(h){
+                    console.log(e+f+g+h);
+                }
+            }
+        }
+    }
+    let mis = func8(10)(10)(10)(10);
+    // let mis = func8(10);
+    // let mis1 = mis(10);
+    // let mis2 = mis1(10);
+    // mis2(10);
+    
+
+    
+    // function nam(w){
+    //     return w;
+    // }
+    // let n = nam(3);
+    // console.log(n);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // for(let i=1; i<=100; i++){
+        //     setTimeout(() => {
+        //         console.log("H" + i);
+        //     }, 3000);
+        // }
+        // document.write("Hello");
+        // alert("Be Alert");
+
+        //Callbacks
+        function myFunc(call){
+            setTimeout(() => {
+                console.log("Essay");
+                call();
+            }, 1000);
+        }
+        function myFunc1(){
+            console.log("Done");
+        }
+        // myFunc1();
+        myFunc(myFunc1);
+        function myFun(value,fu){
+            setTimeout(() => {
+                let myData = 5+value;
+                fu(value);
+            }, 1000);
+        };
+        myFun(10,function(val){
+            console.log(val);
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let arr = [23,45,56,677,78,56,3,45];
+        // arr.pop();
+        // arr.push(454);
+        // arr.shift();
+        // arr.unshift(45676);
+        // arr.reverse();
+        arr.splice(0,2,"2434534","rgr","3545");
+        // arr.slice(0,2);
+        console.log(arr);
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        };
+        let arr1 = [34,5,65,6,56,454,65,565,76,54];
+        // delete arr1;
+        arr1.join("!");
+        console.log(arr1);
+
+      let  a = arr1.concat(arr);
+      console.log(a); 
+
+      let arr2 = ["Apple","Banana","Mango","Pineapple"];
+      if(arr2[3] === "Pineapple"){
+        arr2.push("Guava");
+        console.log(arr2);
+      }else{
+        alert("This is Wrong");
+      };
+
+      let str = "foodfeed";
+      let sa = Array.from(str);
+      console.log(sa.sort());
+      console.log(sa.lastIndexOf("e"));
+
+      
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+
+    </div>
+
+
+    <script>
+        let myResult = +prompt("Enter Your Grade");
+        if(myResult <=100 && myResult >=0){
+            if(myResult>=80 && myResult <=100){
+                alert("A+");
+            }else if(myResult >=70 && myResult < 80){
+                alert("A");
+            }else if(myResult >=60 && myResult < 70){
+                alert("B");
+            }else if(myResult >=50 && myResult < 60){
+                alert("C");
+            }else if(myResult >=40 && myResult < 50){
+                alert("D");
+            }else{
+                alert("F");
+            }
+        }else{
+            alert("Enter a Number");
+        };
+    </script>
+</body>
+</html>

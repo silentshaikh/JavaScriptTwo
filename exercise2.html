@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head" >This is a Heading</h1>
+    <div id="edit">
+
+    </div>
+
+
+    <script>
+        let head = document.getElementById("head");
+        let box = document.getElementById("edit");
+        let myInp = document.createElement("input");
+        myInp.style.padding = "10px 30px";
+        myInp.setAttribute("value","");
+        myInp.type = "text";
+        box.appendChild(myInp);
+        let muButton = document.createElement("button");
+        muButton.style.marginLeft = "10px";
+        muButton.style.padding = "5px 10px";
+        muButton.style.color = "#fff";
+        muButton.style.backgroundColor = "aquamarine";
+        muButton.style.border = "none";
+        muButton.innerText = "Edit Btn";
+        box.appendChild(muButton);
+        muButton.addEventListener("click",() => {
+            // alert("alert");
+            if(myInp.value === ""){
+                alert("Please Fill the Input");
+            }else{
+               head.style.fontFamily = `Courier New', Courier, monospace`;
+            head.innerHTML = myInp.value;
+           
+           }
+        });
+        myInp.addEventListener("blur", () => {
+            localStorage.setItem("Edit",myInp.value);
+        });
+
+    </script>
+</body>
+</html>

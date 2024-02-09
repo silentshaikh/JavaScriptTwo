@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Array Destructuring
+
+        let myArr = ["Moiz", "Karachi", "Pakistan"];
+        let [myName, ...myCountry] = myArr;
+        console.log(`Hello, My Name is ${myName}. My Home is ${myCountry}.`);
+        const myFunc = ([myName, ...myCountry]) => {
+            console.log(`Hello, My Name is ${myName}. My Home is ${myCountry}.`);
+        };
+        myFunc(["Moiz", "Karachi", "Pakistan"]);
+        const myFunc1 = () => {
+            return ["Moiz", "Karachi", "Pakistan"];
+        };
+        let [myName1, ...myCountry1] = myFunc1();
+        console.log(`Hello, My Name is ${myName1}. My Home is ${myCountry1}.`);
+        //Swaping Number Using Destructuring
+        let e = 15;
+        let f = 10;
+        [e, f] = [f, e];
+        console.log(`e is ${e} using Destructuring`);
+        console.log(`f is ${f} using Destructuring`);
+        let myArr1 = ["Apple", "Banana", "Orange", ["Cucumber", "Potatoes", "Tomato",["Cricket","Football","Hockey"]]];
+        let [app, ban, oran, [cuc, potat, tom,[cric]]] = myArr1;
+        console.log(`Hello, My Favourite Fruit is ${app}. My Favourite Vegetable is ${potat}. My Favourite Sport is ${cric}.`);
+        let fun = () => {
+            return ["Hi","Hello"];
+        };
+        let [hi,hello] = fun();
+        console.log([hi,hello]);
+
+
+        //Object Destructuring
+        let myObj = {
+            name:"Moiz",
+            course:"Artificial Intelligence",
+            hobby:{
+                hob1:"Animation",
+                hob2:"Cricket",
+                ilets:{
+                    language:"English Language",
+                    obj:{
+                        education:"phd",
+                    },
+                },
+            },
+        };
+        let {name,course="JavaScript",hobby} = myObj;
+        console.log(`Hello, My Name is ${name}. My Course is ${course}. My Hobby is ${hobby.hob1}. My Free time, I doing ${hobby.ilets.language} classes. My Education is ${hobby.ilets.obj.education}.`);
+        let fun2 = () => {
+            return {
+                name1:"Harry",
+                course1:"Python",
+            };
+        }
+        let {name1,course1} = fun2();
+        console.log({name1,course1});
+
+
+
+    </script>
+</body>
+
+</html>

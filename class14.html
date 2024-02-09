@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <div id="box" style="font-family: 'Courier New', Courier, monospace;"></div>
+
+
+
+
+
+    <script>
+        let myObj1 = {
+            id: 1,
+            name: "Harry",
+            mo: () => {
+                return () => {
+                    console.log("Method");
+
+                }
+            }
+        };
+        console.log(myObj1);
+        myObj1.mo()();
+
+        let myBox = document.getElementById("box");
+        let studName = document.createElement("p");
+        let studNameText = document.createTextNode(myObj1.name);
+        studName.appendChild(studNameText);
+        myBox.appendChild(studName);
+        let studHead = document.createElement("h3");
+        let studHeadText = document.createTextNode("Student Name:");
+        studHead.appendChild(studHeadText);
+        myBox.insertBefore(studHead, myBox.children[0]);
+        let studId = document.createElement("p");
+        let studIdText = document.createTextNode(myObj1.id);
+        studId.appendChild(studIdText);
+        myBox.insertBefore(studId, myBox.children[0]);
+        let studHead2 = document.createElement("h3");
+        let studHeadText2 = document.createTextNode("Roll No:");
+        studHead2.appendChild(studHeadText2);
+        myBox.insertBefore(studHead2, myBox.children[0]);
+
+        
+
+        let myObj2 = {
+            name:"Moiz",
+            rollNo:14,
+            course:"Front End Developer and Artificial Intelligence",
+            teacher:[{name:"Ishaq",timing:"10 AM"}]
+        }
+        console.log(myObj2);
+
+        function obj(name,id,address){
+            this.name = name;
+            this.id = id;
+            this.address = address;
+        }
+        obj.prototype.fun = function (){
+            return () => {
+                console.log(this.name);
+
+            }
+        }
+        let obj1 =  new obj("Abdul Moiz",1014,"New York");
+        console.log(obj1);
+        obj1.fun()();
+
+        
+        
+    </script>
+</body>
+
+</html>

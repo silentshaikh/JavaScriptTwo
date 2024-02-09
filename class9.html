@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let sto = "This is a Local Storage";
+        localStorage.setItem("sto",sto);
+        console.log(localStorage.getItem("sto"));
+        let arr = ["Apple","Banana","Orange"];
+        localStorage.setItem("Array",JSON.stringify(arr));
+        console.log(localStorage.getItem("Array"));
+        // localStorage.clear();
+    </script>
+</body>
+</html>

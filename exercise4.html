@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        class Library{
+            constructor(book1,book2,book3){
+                this.bookOne = book1;
+                this.bookTwo = book2;
+                this.bookThree = book3;
+            };
+            getBookList(){
+                console.log(`${this.bookOne},${this.bookTwo},${this.bookThree}.`);
+            };
+            issueBooks(userName,bookName){
+                console.log(`${bookName} is the book for ${userName}.`);
+            };
+            bookReturn(){
+                return(`${this.bookOne} book is returned.`);
+            };
+        }
+        let myLibrary = new Library("English","Math","Computer");
+        // console.log(myLibrary);
+        myLibrary.getBookList();
+        myLibrary.issueBooks("Jason","Physics");
+        let returnFunc = myLibrary.bookReturn();
+        console.log(returnFunc);
+
+    </script>
+</body>
+</html>

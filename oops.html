@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        //Classes
+        class Dad {
+            constructor(eyeColor, name, height) {
+                this.eyeColor = eyeColor;
+                this.name = name;
+                this.height = height;
+            }
+            foo() {
+                console.log("Hello Guys")
+            }
+        };
+        let myDad = new Dad("Black", "Brown", 6 + " Feet");
+        console.log(myDad);
+        class Daughter extends Dad {
+            constructor(eyeColor, dname, dheight) {
+                super(eyeColor);
+                this.name = dname;
+                this.height = dheight;
+            }
+        }
+        let myDaughter = new Daughter("Black", "Christina", 5 + "Feet");
+        console.log(myDaughter);
+        class Son extends Dad {
+            constructor(sheight, sname, eyeColor) {
+                super(eyeColor);
+                this.name = sname;
+                this.height = sheight;
+            }
+        }
+        let mySon = new Son("Brown", "Harry", 6 + "Feet");;
+        console.log(mySon);
+        mySon.foo();
+
+        class Students {
+            constructor(name, school, cls) {
+                this.myName = name;
+                this.mySchool = school;
+                this.myClass = cls;
+            }
+            move() {
+                return (`Hello, My Name is ${this.myName}. My School Name is ${this.mySchool}. My Class is Matric`);
+            }
+        }
+        let myStudents = new Students("Moiz", "CMS", "Matric");
+        // console.log(myStudents); 
+        // myStudents.move();
+        class Player extends Students {
+            constructor(name, school, cls, game) {
+                super(name, school, cls);
+                this.myGame = game;
+            }
+            myMove() {
+                return (`${super.move()} My Sport is ${this.myGame}.`);
+            }
+        }
+        let myPlayer = new Player("Naboo", "CMS", "Matric", "Cricket");
+        console.log(myPlayer.myMove());
+
+        class Building{
+            constructor(building, room, washroom, kitchen, gallery){
+                this.buildingName = building;
+                this.myRoom = room;
+                this.myWashroom = washroom;
+                this.myKitchen = kitchen;
+                this.myGallery = gallery;
+            };
+            more(){
+                return (`${this.buildingName},${this.myRoom},${this.myWashroom},${this.myKitchen},${this.myGallery}`);
+            };
+        };
+
+        // let myBuilding = new Building();
+        // myBuilding.more();
+        class FloorOne extends Building {
+            constructor(building, room, washroom, kitchen, gallery, flatno){
+                super(building, room, washroom, kitchen, gallery);
+                this.myFlatNo = flatno;
+            };
+            myMore() {
+                console.log(`${super.more()} ,${this.myFlatNo}.`);
+            };
+        };
+        let myFloorOne = new FloorOne("Burj Khalifa ", 3, 2, 1, 1, 101);
+        myFloorOne.buildingName = "Havai Adda";
+        console.log(myFloorOne);
+        myFloorOne.myMore();
+
+        //Static method
+        class Stat{
+            constructor(name){
+                this.myName = name;
+
+            }
+            static prit() {
+                console.log("Potter");
+            }
+        }
+        // let myStati = new Stat("Potter");
+        Stat.prit();
+
+        //Get and Set
+        class Tget{
+            constructor(name){
+                this.name = name;
+            }
+            set mySet(str){
+                this._val = str;
+            }
+            get myGet(){
+                console.log(`Hello, ${this._val}`);
+            };
+        }
+        let myTget = new Tget("Ron");
+        myTget.mySet = "Roy";
+        myTget.myGet = 100;
+        myTget.myGet;
+
+        console.log(myTget);
+
+        class Tget2{
+            constructor(name,str){
+                this.name = name;
+                this._el = str;
+            }
+            get oGet(){
+                console.log(`Hi, ${this._el}`);
+            }
+        }
+        let myTget2 = new Tget2("Thanos","Thunder");
+        myTget.name = "Boy";
+        myTget2.oGet;
+        console.log(myTget2);
+    </script>
+</body>
+
+</html>

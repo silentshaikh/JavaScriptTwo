@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        //Closure in Arrow Function
+        const myFunc = (a) => (b) => (c) => (d) => a+b+c+d;
+        // console.log(myFunc(3)(4));
+        let myFun = myFunc(1);
+        let myFun1 = myFun(1);
+        let myFun2 = myFun1(1);
+        let myFun3 = myFun2(1);
+        console.log(myFun3);
+        //Currying in Arrow Function
+        const myFunc1 = (e) => (f) => (g) => (h) => e+f+g+h;
+        let myFun4 = myFunc1(2)(2)(2)(2);
+        console.log(myFun4);
+
+        //Rest Parameter
+        const myFunc2 = (...count) => {
+            console.log(count);
+        //    let total =  count.reduce((first,second) => {
+        //         return first+second;
+        //     },0);
+        let total  = count.reduce((first,second) => first+second);
+         console.log(total);
+        }
+        myFunc2(2,4,6,6);
+        const myFunc4 = (...num) => {
+            console.log(num);
+        }
+        myFunc4(2,4,5,6,7,3);
+
+        //Spread Operater
+        let myArr = [2,4,6];
+        const myFunc3 = (a,b,c) => a+b+c;
+        let myFun5 = myFunc3(...myArr);
+        console.log(myFun5);
+        let myArr1 = [1,2,3];
+        let myArr3 = [6,7,8];
+        let myArr2 = [...myArr1,4,5,...myArr3];
+        // myArr2.push(4);
+        console.log(myArr2);
+        console.log(myArr1);
+        let myObj = {
+            name:"Abdul Moiz",
+            course:"Front End Developer,Artificial Intelligence",
+        };
+        let myObj1 = {
+            city:"Karachi",
+        };
+        let myObj2 = {...myObj,...myObj1,country:"Pakistan"};
+        console.log(myObj2);
+        
+    </script>
+</body>
+</html>

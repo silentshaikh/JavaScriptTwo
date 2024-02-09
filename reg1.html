@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+       // exec
+        let name = "My Name is Abdul Moiz Moiz";
+        // let eName = /name/i;
+        // console.log(eName.exec(name));
+
+        //test
+        // let tName = /abdul/i;
+        // console.log(tName.test(name));
+
+        //match
+        let mName = /moiz/ig;
+        let mList = name.match(mName);
+        console.log(mList);
+        console.log(mList[1]);
+        //Wildcard Character /./
+        let wild = "Character Classes Character Setsa";
+        let mWil = /set./i;
+        let fin = wild.match(mWil);
+        console.log(fin); 
+        //Character classes /b[aeiou]g/
+        let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+        let matchVowel = /[aeiou]/ig;
+        let finalResult =  quoteSample.match(matchVowel);
+        console.log(finalResult);
+        // console.log(finalResult[1]);
+        
+        //Meta Character
+        // let n = "Harry";
+        // let f = /^h/i;
+        // let fi = n.match(f);
+        // console.log(fi);
+        // let f1 = /ry$/i;
+        // let fi2 = n.match(f1);
+        // console.log(fi2);
+        // let f2 = /h./i;
+        // let fi3 = n.match(f2);
+        // console.log(fi3);
+        // let f3 = /h*/i;
+        // let fi4 = n.match(f3);
+        // console.log(fi4);
+        // let f4 = /hr?t?/i;
+        // let fi5 = n.match(f4);
+        // console.log(fi5);
+        let para = `This is a Regular Expression.`;
+        let fp = /^t/i;
+        let res = para.match(fp);
+        console.log(res);
+        let fp1 = /n\.$/i;
+        let res1 = para.match(fp1);
+        console.log(res1);
+        let fp2 = /t.is/i;
+        let res2 = para.match(fp2);
+        console.log(res2);
+        let fp3 = /t*/i;
+        let res3 = para.match(fp3);
+        console.log(res3);
+
+        //Character Sets
+        let myName = "Abdul Moiz";
+        let nMatch = /m[a-z]*z/i;
+        let final = myName.match(nMatch);
+        console.log(final);
+        let nMatch1 = /a[^a-z]*l/i;
+        let final1 = myName.match(nMatch1);
+        console.log(final1);
+        let num = "num123 min";
+        num = "num123";
+        let nMatch2 = /n[a-z]*[0-9]*$/i;
+        let final2 = num.match(nMatch2);
+        console.log(final2);
+
+        //Quantifiers
+        let q = "harharhar nilnil";
+        let m = /har{1,3}/i;
+        let mat = q.match(m);
+        console.log(mat);
+        let q2 = "ahhh";
+        let m2 = /ah{3}/i;
+        let mat2 = q2.match(m2);
+        console.log(mat2);
+        
+        //username validation
+//         let username = "JackOfAllTrades";
+// let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; 
+// // let result = userCheck.test(username);
+// let result = username.match(userCheck);
+// console.log(result)
+        //password match
+//         let sampleWord = "astronaut";
+// let pwRegex = /(?=\w{6})(?=\w*\d{2})/;
+// let result = pwRegex.test(sampleWord);
+//remove space
+// let hello = "   Hello, World!  ";
+// let wsRegex = /(^\s+)|(\s+$)/g; // Change this line
+// let result = hello.replace(wsRegex,"");
+// console.log(result)
+    </script>
+</body>
+</html>

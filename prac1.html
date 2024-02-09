@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="red">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima totam quidem obcaecati temporibus pariatur eius consequatur. Nemo id ipsum, minima veniam, officiis vero nisi reprehenderit voluptatibus ratione voluptatum dicta eveniet.</p>
+    </div>
+    <h1 id="para" class="grgtry">What are you Doing?</h1>
+    <div id="dev">
+        <p id="re">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque, repellendus nobis, facere eligendi voluptate natus deserunt assumenda voluptates ullam modi itaque possimus adipisci corrupti amet maxime quam quia laudantium, atque error accusamus at nam. At nemo fuga, modi et molestias incidunt dignissimos! Quis rem, optio at unde sunt explicabo?</p>
+    </div>
+    <ul id="list">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+    </ul>
+
+    <div id="web">
+
+    </div>
+    <a href="//codewithharry.com">apply</a>
+
+    <fieldset id="field" class="lorem" title="Lorem Ipsum">
+        <legend>Lorem</legend>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem pariatur amet ullam architecto voluptatem aliquid optio praesentium aspernatur nobis odit dolore beatae odio quibusdam, doloribus cum assumenda. Quibusdam beatae tenetur earum aliquid cupiditate impedit, quo esse enim nostrum aliquam velit repudiandae harum repellat ut eveniet.</p>
+    </fieldset>
+
+
+    <ol id="order">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ol>
+    <div id="ewq">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime qui esse odit voluptatem temporibus autem accusantium minus provident nisi? Eius praesentium recusandae atque ipsa itaque sequi perferendis sint pariatur cupiditate quia quod quam iste ut voluptatibus velit, nihil minima earum fuga labore necessitatibus veniam doloribus sit. Dolores incidunt temporibus necessitatibus dolor hic eligendi, minus id.</p>
+    </div>
+    <script>
+
+        let r = document.querySelector("#red p");
+        // r = r.innerHTML;
+        // r = r.parentElement.setAttribute("class","abc");
+        r = r.setAttribute("id","blue");
+        let b = document.getElementById("blue");
+        b.style.color = "skyblue";
+        b.removeAttribute("style");
+        
+      b = b.getAttributeNode("id");
+        console.log(b);
+        let para = document.getElementById("para");
+        //  para = para.className = "xyz";
+       let para1 = para.classList.add("xyz");
+        para1 = para.classList.replace("grgtry","wwe");
+        // console.log(para1);
+
+        let dev = document.getElementById("dev");
+        dev = dev.classList.add("HP","WB");
+        let e = document.getElementById("re");
+        let z = e.parentElement.classList;
+        console.log(z);
+
+let li = document.getElementById("list");
+li =  li.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling
+.nextElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
+console.log(li);
+
+let web = document.getElementById("web");
+let c = document.createElement("p");
+let t = document.createTextNode("This is a Paragraph");
+web.appendChild(c);
+c.appendChild(t);
+c.style.border = "2px dashed black";
+c.style.padding = "13px";
+let w = c.parentElement;
+console.log(w);
+
+        //web crawler
+        let link = document.links;
+        console.log(link);
+        let f = "code";
+        Array.from(link).forEach((e)=> {
+            if(e.href.includes(f)){
+                console.log("Done");
+            }else{
+                console.log("Not Done");
+            };
+        });
+
+        let field = document.getElementById("field");
+        // field =  field.hasAttribute("title","class");
+        // console.log(field);
+        field = field.hasChildNodes();
+        console.log(field);
+        let myOrder = document.getElementById("order");
+        let newList = document.createElement("li");
+        let newWord = document.createTextNode("Ten");
+        newList.appendChild(newWord);
+        let myList = myOrder.children[0];
+        console.log(myList);
+        myOrder.replaceChild(newList,myList);
+        myOrder.removeChild(newList);
+
+        let ewq = document.getElementById("ewq");
+        let inc = ewq.children[0];
+        let con = ewq.contains(inc);
+        console.log(con);
+
+
+    </script>
+</body>
+</html>

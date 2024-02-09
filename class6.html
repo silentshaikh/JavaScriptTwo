@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let myFunc = (myVar) => {
+            return myVar;
+        }
+       let mySave =  myFunc("Hello! Function");
+       console.log(mySave);
+       let myFunc1 = (num) => {
+        return num*num*num;
+       }
+       console.log(myFunc1(5));
+       let myCube = [0,1,2,3,4,5];
+    //    let myCube1 = [];
+       let myCFunc = () => {
+        for(let i=0; i<myCube.length; i++){
+            myCube[i] = myCube[i]**3;
+        }
+                console.log(myCube);
+        //    myCube.forEach(element => {
+    //         element = element*element*element;
+    //     })
+       }
+       myCFunc();
+       //Closures
+       let num = 30;
+       let nam = 20;
+       const myClos = () => {
+           // return num**2;
+           return () => {
+               console.log(nam + num);
+            }
+        }
+        //    console.log(myClos(4));
+        let my = myClos(); // this is a Private Variable
+        my();
+        num = 12;
+
+        const myClos1 = (value) => {
+            return (val) => {
+                let f = value+val;
+                // console.log(f);
+                return (val1) => {
+                    let f1 = f+val1;
+                    // console.log(f1);
+                    return (val2) => {
+                        let f2 = f1+val2;
+                        console.log(f2);
+                    }
+                }
+            }
+        }
+        let cF = myClos1(5);       
+       let cF1 = cF(5);
+       let cF2 =  cF1(5);
+        cF2(5);
+
+
+        //Hoisting
+        //Function Hoisting
+       
+        myFunction(1,2);
+        function myFunction(a,b){
+            let abc = a+b;
+            console.log(abc);
+        }
+        
+        var abc = 20;
+        function myFun(){
+            console.log(abc);
+            var abc = 55;
+            console.log(abc);
+        } 
+        myFun();
+        const myFu = () => {
+            console.log(q);
+            var q = 45; 
+            console.log(q);
+        }
+        myFu();
+
+        //Variable Hoisting
+        console.log(a);
+        // let a = 15;
+        var a = 15;
+        console.log(a);
+    </script>
+</body>
+</html>

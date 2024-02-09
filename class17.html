@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore doloribus velit excepturi
+        necessitatibus iusto sapiente, itaque, quisquam consequuntur eveniet, perspiciatis maiores. Omnis ipsa ea quia
+        optio nihil voluptates saepe ex sint, non tempora exercitationem voluptatem tenetur natus nulla ut ad quos
+        dolorum, suscipit aut odio!</p>
+    <button id="btn" onclick="myFunc()">Submit</button>
+
+    <div id="list">
+
+    </div>
+    <button id="frt">Fruits</button>
+    <script>
+        // const myFunc = () => {
+        //     let ttp = new XMLHttpRequest();
+        //     ttp.onreadystatechange = function(){
+        //         if(this.readyState == 4 && this.status == 200){
+        //             console.log(this.responseText);
+        //         } else if(this.readyState == 4 && this.status == 404){
+        //             document.getElementById("para").innerHTML = `File not Found.`;
+        //         }          
+        //      }
+
+        //     ttp.open('GET',"https://jsonplaceholder.typicode.com/posts",true);
+        //     ttp.send();
+        // }
+
+        // let frt = document.getElementById("list");
+        // const myFruits = () => {
+        //     let myHttp = new XMLHttpRequest();
+        //     myHttp.onreadystatechange = function(){
+        //         let creLi = document.createElement("li");
+        //         if(this.readyState == 4 && this.status == 200){
+        //             Array.from(creli).forEach(element => {
+        //                 element.innerText = this.responseText;
+        //                 frt.appendChild(element);
+        //             });
+
+        //         }else{
+        //             alert("Not Found");
+        //         }
+        //     }
+        //     myHttp.open('GET',"fruit.json",true);
+        //     myHttp.send();
+        // }
+        // let btn = document.getElementById("frt");
+        // btn.addEventListener("click",myFruits);
+
+        //Using Fetch Api
+        let frt = document.getElementById("list");
+        let btn = document.getElementById("frt");
+        fetch("https://jsonplaceholder.typicode.com/photos")
+            .then(response => response.json())
+            .then(json =>
+                json.forEach(element => {
+                    let url = element.thumbnailUrl;
+
+                    let img = document.createElement("img");
+                    img.src = url;
+
+                    frt.appendChild(img);
+
+
+                }))
+    </script>
+</body>
+
+</html>

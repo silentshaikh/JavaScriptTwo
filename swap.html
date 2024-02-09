@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //Swaping Number without third variable
+        let a = 5;
+        let b = 10;
+        b -=a;
+        console.log(`b is ${b} without third variable`);
+        a +=b;
+        console.log(`a is ${a} without third variable`);
+        //Swaping Number with third variable
+        let c = 10;
+        let d = 5;
+        c-=d;
+        d+=c;
+        console.log(`c is ${c} with third variable`);
+        console.log(`d is ${d} with third variable`);
+        //Swaping Number Using Destructuring
+        let e = 15;
+        let f = 10;
+        [e,f] = [f,e];
+        console.log(`e is ${e} using Destructuring`);
+        console.log(`f is ${f} using Destructuring`);
+    </script>
+</body>
+</html>

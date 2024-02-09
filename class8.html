@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="forms">
+        <input type="email" name="" id="change">
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="equal" >
+
+    </div>
+
+    <script>
+        // let myChange = document.getElementById("change");
+        // let myForm = document.getElementById("forms");
+        let equal = document.getElementById("equal");
+            equal.style.position = "relative";
+        equal.style.backgroundColor = "crimson";
+        equal.style.width = "200px";
+        equal.style.height = "200px";
+        equal.style.borderRadius = "10px";
+        equal.style.marginTop = "10px";
+        let a = 0;
+        let b = 0;
+        let func = () => {
+            
+          if(a === 200){
+            b = b+10;
+            // clearTimeout(inta);
+            equal.style.top = `${b}px`;
+            equal.style.backgroundColor = "skyblue";
+            if(b === 200){
+                clearInterval(clr);
+                equal.innerHTML = "<h1>The End</h1>";
+                equal.style.color = "white";
+                equal.style.textAlign = "center";
+            }
+          }else{
+            a = a+10;
+          equal.style.left = `${a}px`;
+          }
+          
+    
+        };
+      let clr =   setInterval(func,500);
+        // if(a === 200){
+        //     clearInterval(func);
+        // }else{
+          
+        // }
+        // clearInterval(func);
+
+
+
+    </script>
+</body>
+</html>

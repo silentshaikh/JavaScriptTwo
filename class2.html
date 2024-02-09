@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cDiv">
+
+    </div>
+    <button id="btn">ADD</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let htDiv = document.getElementById("cDiv");
+       let myFunc = () => {
+        let p = document.createElement("p");
+        let para = "This is a ParaGraph";
+        p.innerHTML = para;
+        htDiv.appendChild(p);
+       }
+       btn.addEventListener("click",myFunc);
+
+    </script>
+</body>
+</html>

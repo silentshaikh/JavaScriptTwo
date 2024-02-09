@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 7</title>
+</head>
+<style>
+ .efer{
+    
+ }
+</style>
+<body>
+    
+    <div class="container" id="box">
+        <h1 class="abc">Hello How are you!</h1>
+        <h2 class="abc">This is a Image</h2>
+        <p class="abc">This is a Cool Image</p>
+
+        
+    </div>
+    <div id="cont" class="fnierigeirbgui hello">
+        <p id="para">jfwenjvnjrfv</p>
+    </div>
+    <div id="con" class="app ufone">
+        <p id="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et nemo nobis fuga suscipit modi natus ducimus ad, provident velit consequuntur?</p>
+    </div>
+
+    
+        <fieldset id="wen">
+            <legend >Required</legend>
+        <h1 lang="" >Hello</h1>
+        <h3>How are You</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non neque debitis voluptas incidunt, eius atque autem sed nam accusamus veniam vel cupiditate distinctio est. Itaque blanditiis sint alias placeat tenetur dicta sunt sapiente quaerat amet! Sunt minima repellat ex, eos dolorem accusantium ab facilis asperiores.</p>
+    </fieldset>
+    <div >
+        <h1 id="qwe">bsufbyeyfvye</h1>
+    </div>
+    <ol id="red">
+        <li id="f">First</li>
+        <li>Second</li>
+        <li id="t">Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+    </ol>
+
+    <div id="web">
+        <h1>Hello </h1>
+        <h3>How are you</h3>
+    </div>
+
+    <div id="bew">
+
+    </div>
+    <div id="list">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About</li>
+        <li>Contact</li>
+    </div>
+    <div id="list2">
+        
+    </div>
+    <ul id="li-list">
+
+    </ul>
+
+    <div id="add">
+        <p>djncjedncjfnjvnfjf</p>
+        <h1>dioeiedncd</h1>
+    </div>
+    <div id="att" class="">
+
+    </div>
+    <div id="chil">
+
+    </div>
+
+    <div id="equal">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+        <li>Baseball</li>
+    </div>
+    <div id="equalto">
+        <li>Cricket</li>
+    </div>
+    <script>
+        let myCont = document.getElementById("box");
+        let myImage = document.createElement("img");
+        myImage.src = "./billie-eilish-aesthetic-wallpaper.jpg";
+        myImage.style.width = "30vw";
+        myImage.alt = "Image";
+        myCont.appendChild(myImage);
+        
+        // let a = document.images;
+        // Array.from(a).forEach(e => {
+        //     console.log(e);
+        // });
+        // let b = document.scripts;
+        // Array.from(b).forEach(el => {
+        //     console.log(el);
+        // });
+        let a = document.all;
+        console.log(a);
+        //  Array.from(a).forEach(el => {
+        //      console.log(el);   
+        //     });
+            let box = document.getElementsByClassName("abc");
+            console.log(box);
+            box[0].style.color = "skyblue";
+            box[1].style.color = "lightgreen";
+            box[2].style.color = "crimson";
+            Array.from(box).forEach(e => {
+                e.style.fontFamily = `'Courier New', Courier, monospace`; 
+            });
+            let para = document.getElementById("para");
+        //    let pra = para.childNodes;
+        //    let pra1 = para.parentNode;
+           let pra2 = "hello";
+            para.className = pra2;
+            // console.log(pra1);
+            let myCon = document.getElementById("cont");
+           myCon =  myCon.getAttributeNode("class").nodeValue;
+            console.log(myCon);
+           
+            // console.log(myCon.getAttributeNode("class"))
+        //    let m =   myCon.setAttribute("class","welcome");
+        //     let w = myCon.getAttribute("class");
+        //     console.log(w);
+            let c = document.querySelector("#con");
+            // c.classList.remove("app");
+            // c.classList.add("qrst");
+            c.classList.replace("app","qrst");
+            // c;
+            console.log(c.attributes);
+        //    console.log(c);
+        //     c.innerHTML = "hello";
+        //     console.log(c);
+
+            let p = document.getElementById("para1");
+            p.addEventListener("mouseenter",pa);
+        
+          function pa() {
+            p.style.color = "crimson";
+          }
+          
+          let par = document.getElementById("wen");
+          par.style.fontFamily = `'Courier New', Courier, monospace`;
+        //   par.style.fontFamily = `'Courier New', Courier, monospace`;
+        //   par.children;
+        // par1 =  par1.style.fontFamily = `'Courier New', Courier, monospace`;
+        // let par2 = par1.children;
+        //   console.log(par1);
+        
+            let q = document.getElementById("qwe");
+            console.log(q.parentNode)
+
+          let r = document.getElementById("t");
+        //   r = r.lastElementChild;
+        r = r.previousElementSibling;
+          console.log(r);
+
+          let web = document.getElementById("web");
+          let ce = document.createElement("p");
+          let te = document.createTextNode("This is a Node");
+          let co = document.createComment("this is");
+          //   console.log(te);
+          web.insertBefore(ce,web.children[0]);
+          ce.style.border = "1px dashed black";
+          ce.appendChild(te);
+          web.appendChild(co);
+
+          let bew = document.getElementById("bew");
+          let b1 = document.createElement("h1");
+          let b2 = document.createTextNode("insertAdjacentElement");
+          b1.appendChild(b2);
+          bew.insertAdjacentElement("afterbegin",b1);
+      
+          let creLi = document.createElement("li");
+          let text = document.createTextNode("Pineapple");
+          creLi.appendChild(text);
+          let list = document.getElementById("list");
+          let chi = list.children[3];
+        //   console.log(list);
+          
+        //   console.log(creLi)
+          list.replaceChild(creLi,chi);
+          list.removeChild(creLi);
+
+          let list2 = document.getElementById("list2");
+          let l = document.createElement("li");
+          l.setAttribute("class","js-list");
+          let t = document.createTextNode("Falooda");
+          l.appendChild(t);
+          list2.appendChild(l);
+          let chil =  list2.children[0];
+        //   console.log(chil);
+        let list3 = document.getElementById("li-list");
+       let chil2 = chil.cloneNode(true);
+          list3.appendChild(chil2);
+          let add = document.getElementById("add");
+           let cAdd = add.children[0];
+        //    add =  add.contains(cAdd);
+           console.log(add);
+
+          let att = document.getElementById("att");
+          att = att.hasAttribute("class");
+          console.log(att);
+
+          let myChil = document.getElementById("chil");
+          myChil = myChil.hasChildNodes();
+          console.log(myChil);
+
+          let eq = document.getElementById("equal");
+          let eqto = document.getElementById("equalto");
+          eq = eq.firstElementChild;
+          eqto = eqto.firstElementChild;
+         eq =  eq.isEqualNode(eqto);
+         console.log(eq);
+
+    </script>
+</body>
+</html>

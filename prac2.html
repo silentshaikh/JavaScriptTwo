@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="forms">
+        <input type="email" class="inp" name="" id="name" required><br><br>
+        <textarea name="" class="inp" id="texta" cols="30" rows="10" required></textarea><br>
+        <input type="radio" class="inp" value="" required name="opt" id="m">
+        <label for="m">Male</label>
+        <input type="radio" class="inp" value="" required name="opt" id="f">
+        <label for="f">Female</label><br><br>
+        <button type="submit">Submit</button>
+
+    </form>
+    <div id="par">
+
+        <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem mollitia laudantium enim facere vel perferendis, dolor, omnis distinctio laborum labore debitis natus! Maxime veniam quia deleniti porro deserunt commodi. Harum expedita velit, itaque, aut fugiat modi animi repellendus eius facere quod sunt rem totam.</p>
+    </div>
+    <div id="par2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ab!</p>
+    </div>
+    <div id="par3">
+        <p id="pr" title="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aperiam laboriosam cupiditate libero amet ab quos quae accusamus. Qui sed in labore ea? Minima facere hic fuga sed libero, provident debitis obcaecati! Odit deleniti vero tempora quo modi rem voluptas nesciunt ab id nemo, fugit atque enim voluptates natus, mollitia ratione minus tenetur, eligendi nihil! Rem doloremque id suscipit cupiditate?</p>
+    </div>
+    <div id="par4">
+
+    </div>
+
+    <div id="code">
+
+    </div>
+
+    <script>
+        // Form Events
+        // let myEmail = document.getElementById("name");
+        // let para = document.getElementById("para");
+        // let myFunc = () => {
+        //     myEmail.style.backgroundColor = "green";
+        //     myEmail.style.color = "white";
+        
+        // };
+        // myEmail.addEventListener("focus",myFunc);
+        // let myFunc2 = () => {
+        //     myEmail.style.backgroundColor = "crimson";
+        
+        // };
+        // myEmail.addEventListener("blur",myFunc2);
+
+        // let myTexta = document.getElementById("texta");
+        // let myFunc3 = () => {
+        //     para.innerHTML = myTexta.value;
+
+        // };
+        // myTexta.addEventListener("input",myFunc3);
+        // let myFunc4 = () => {
+        //     para.innerHTML = myTexta.value;
+
+        // };
+        // myTexta.addEventListener("change",myFunc4);
+        // let myForm = document.getElementById("forms");
+    //         let myInputs = document.querySelectorAll(".inp"); 
+    //     let myFunc5 = () => {
+    //         alert("Please fill all the fields");
+
+    //     };
+    //    Array.from(myInputs).forEach(e => {
+    //        e.addEventListener("invalid",myFunc5);
+            
+    //     })
+
+    let par = document.getElementById("par");
+    let chi = par.children[0];
+    par = par.contains(chi);
+    console.log(par);
+
+        let par2 = document.getElementById("par2");
+        let chi2 = par2.children[0];
+        let cre = document.createElement("h1");
+        let cret = document.createTextNode("This is a Heading");
+        cre.appendChild(cret);
+        par2.replaceChild(cre,chi2);
+        par2.removeChild(cre);
+
+        let par3 = document.getElementById("par3");
+        let chi3 = par3.children[0];
+        let par4 = document.getElementById("par4");
+        let chi4 = chi3.cloneNode(true);
+        par4.appendChild(chi4);
+
+        let cod = document.getElementById("code");
+        let anc = document.createElement("a");
+        anc.setAttribute("href","https://www.codewithharry.com");
+        let head = document.createElement("h1");
+        let headText = document.createTextNode("Go to CodeWithHarry");
+        head.appendChild(headText);
+        anc.appendChild(head);
+        cod.appendChild(anc);
+
+
+    </script>
+</body>
+</html>

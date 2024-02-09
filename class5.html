@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        // for(let i=1; i<=200; i++){
+        //     if(i%2===0){
+        //         console.log(i+" Two");
+
+        //     }else{
+        //         console.log(i+ " | Other");
+        //     };
+        // };
+        let arrFor = ["Apple","Banana","Guava"];
+        let arrFor1 = ["Carrot"];
+        let arrFull = [];
+        for(let i=0; i<arrFor.length; i++){
+            for(let j=0; j<arrFor1.length; j++){
+                arrFull.push(arrFor1[j] + " " + arrFor[i]);
+                console.log(arrFull);
+            }
+        };
+        // for(let i=1; i<=30; i = i+10){
+        //     for(let j=i; j<i+10; j++){
+        //         document.write(j + "  ");
+        //     }
+        //     document.write("<br>");
+        // };
+        // for(let i=1; i<=10;i++){
+        //     for(let j=1; j<=i; j++){
+        //         document.write(i); 
+        //     }
+        //     document.write("<br>");
+        // }
+        // let p = prompt("Enter Your Name");
+        // while(p){
+        //     if(p === "Moiz"){
+        //         console.log(p);
+               
+        //     }else{
+        //         alert("This is Wrong")
+        //     }
+        //     p++;
+        // }
+            let arr1 = ["FootBall","Cricket","Tennis"];
+            let arr2 = ["We Play"];
+            arr1.forEach(element => {
+                // console.log(element);
+                arr2.forEach(arr  => {
+                    console.log(`${arr} ${element}`)
+                })
+            });
+            let arr3 = [1,2,3,4,5];
+            // arr3.forEach(element => {
+            //     console.log(element**3);
+            // }) 
+             arr3.map(element => {
+                console.log([element]**3);
+            }) 
+            let myArr = [10,20,30];
+            myArr.forEach((e,i,a) => {
+                console.log(a[i] + 100);
+            })
+        
+    </script>
+</body>
+</html>
